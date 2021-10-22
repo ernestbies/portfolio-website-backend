@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import config from './config';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-import messageRoutes from './routes/message';
 import postRoutes from './routes/post';
+import contactRoutes from './routes/contact';
 
 const app = express();
 app.use(bodyParser.json());
@@ -28,7 +28,7 @@ mongoose.connect(config.databaseUrl, {
     }
 });
 
-app.use('/api', messageRoutes);
+app.use('/api', contactRoutes);
 app.use('/api', postRoutes);
 app.listen(config.port, () => {
     console.log('Server listening on port ' + config.port);

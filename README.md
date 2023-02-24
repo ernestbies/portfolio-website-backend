@@ -1,2 +1,2 @@
-# personal-website-backend
-Backend for my personal website.
+# portfolio-website-backend
+Backend for my portfolio website.
